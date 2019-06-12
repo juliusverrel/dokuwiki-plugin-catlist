@@ -247,10 +247,10 @@ class syntax_plugin_catlist extends DokuWiki_Syntax_Plugin {
 		$ns = $data['ns'];
 		$path = $conf['savedir'].'/pages/'.str_replace(':', '/', $ns);
 		$path = utf8_encodeFN($path);
-		/*if (!is_dir($path)) {
-			msg(sprintf($this->getLang('dontexist'), $ns), -1);
+		if (!is_dir($path)) {
+			/*msg(sprintf($this->getLang('dontexist'), $ns), -1);*/
 			return false;
-		}*/
+		}
 			// Main page
 		$main = array( 'id' => $ns.':',
 		               'exist' => false,
